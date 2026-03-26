@@ -1,0 +1,62 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+  <div class="demo" :class="c1Classes" @click="aplicarC1 = !aplicarC1"></div>
+  <div class="demo" :class="c2Classes" @click="aplicarC2 = !aplicarC2"></div>
+  <div class="demo" :class="c3Classes" @click="aplicarC3 = !aplicarC3"></div>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data:{
+      aplicarC1: false,
+      aplicarC2: false,
+      aplicarC3: false
+    },
+    computed:{
+        c1Classes(){
+          return {
+            c1: this.aplicarC1,
+            c2: !this.aplicarC1
+          }
+        },
+        c2Classes(){
+          return {
+            c2: this.aplicarC2,
+            c3: !this.aplicarC2
+          }
+        },
+        c3Classes(){
+          return {
+            c3: this.aplicarC3,
+            c1: !this.aplicarC3
+          }
+        } 
+    }
+  });
+</script>
+
+<style>
+  #app {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .demo {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+  }
+
+  .c1 {
+    background-color: red;
+  }
+  .c2 {
+    background-color: green;
+  }
+  .c3 {
+    background-color: blue;
+  }
+
+</style>
