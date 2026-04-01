@@ -90,22 +90,50 @@ html {
   color: white;
 }
 .btn.heal {
-    background-color: #4caf50;
-    color: white;
+  background-color: #4caf50;
+  color: white;
 }
 .btn.special-attack {
-    background-color: #2196f3;
-    color: white;
+  background-color: #2196f3;
+  color: white;
 }
 .btn.special-heal {
-    background-color: #9c27b0;
-    color: white;
+  background-color: #9c27b0;
+  color: white;
 }
 .btn.give-up {
-    background-color: #607d8b;
-    color: white;
+  background-color: #607d8b;
+  color: white;
 }
 .btn.new-game {
-    background-color: #ff9800;
-    color: white;
+  background-color: #ff9800;
+  color: white;
+}
+.logs ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logs ul li {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0;
+  padding: 3px 0px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.player {
+  background-color: #706ef8;
+  color: white;
+}
+
+.monster {
+  background-color: #fa837b;
+  color: white;
 }
